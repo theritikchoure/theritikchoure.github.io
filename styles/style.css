@@ -1,6 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+body {
+    background-color: #f8f8f8;
+    font-family: Roboto, sans-serif;
+    color: #2a2a2a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border: none;
+    background-color: #2a2a2a;
+    color: #2a2a2a;
+    height: 1.5px;
+    margin: 9px 0;
+}
+
 .wrapper {
   margin: 5% 20%;
 }
@@ -16,18 +35,19 @@
 
 .name {
     font-size: 40px;
-    font-family: 'Karla', sans-serif;
+    font-family: Roboto, sans-serif;
+    margin-bottom: 12px;
 }
 
 .blockquote {
     border-left: 3px solid black;
-    padding-left: 3.5%;
-    font-size: 18px;
+    padding-left: 2.5%;
+    font-size: 16px;
     line-height: 28px;
 }
 
 .item, .skill, .experience_summary, .project, .education {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 28px;
 }
 
@@ -51,7 +71,7 @@
 }
 
 .blog {
-    font-size: 18px;
+    font-size: 16px;
     margin: 20px 0;
     font-weight: 500;
     color: #37352f;
@@ -64,7 +84,7 @@
 }
 
 .contact {
-    font-size: 18px;
+    font-size: 16px;
     margin: 15px 0;
 }
 
