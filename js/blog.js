@@ -21,6 +21,12 @@ const fetchDetails = async (body) => {
 
 const contributorsList = [
     {
+        name: "Testing and Debugging Backend Systems: Best Practices and Tools",
+        thumbnail_src: "https://miro.medium.com/v2/resize:fit:828/format:webp/1*1z4CkOJe1DqP-XTMcGD-lw.png",
+        source_url: "https://ritikchourasiya.medium.com/testing-and-debugging-backend-systems-best-practices-and-tools-3037d8ec1e2d",
+        reading_time: 8,
+    },
+    {
         name: "What is JWT Token and How it works",
         thumbnail_src: "https://miro.medium.com/v2/resize:fit:828/format:webp/1*GqJi5dmqZIwDgTROF3RJGA.png",
         source_url: "https://ritikchourasiya.medium.com/what-is-jwt-token-and-how-it-works-32e7bbe8e635",
