@@ -21,6 +21,12 @@ const fetchDetails = async (body) => {
 
 const contributorsList = [
     {
+        name: "Mastering API Testing with Postman: A Step-by-Step Guide",
+        thumbnail_src: "https://miro.medium.com/v2/resize:fit:828/format:webp/1*A7aV4iiRkiRDoufJjba5yg.png",
+        source_url: "https://ritikchourasiya.medium.com/mastering-api-testing-with-postman-a-step-by-step-guide-c4dc3d196910",
+        reading_time: 6,
+    },
+    {
         name: "Testing and Debugging Backend Systems: Best Practices and Tools",
         thumbnail_src: "https://miro.medium.com/v2/resize:fit:828/format:webp/1*1z4CkOJe1DqP-XTMcGD-lw.png",
         source_url: "https://ritikchourasiya.medium.com/testing-and-debugging-backend-systems-best-practices-and-tools-3037d8ec1e2d",
