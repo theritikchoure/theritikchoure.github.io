@@ -48,17 +48,23 @@ hr {
 
 .item, .skill, .experience_summary, .project, .education {
     font-size: 17px;
-    line-height: 28px;
+    line-height: 30px;
 }
 
 .experience_title {
-    font-size: 24px;
+    font-size: 19px;
     line-height: 34px;
     margin: 0;
 }
 
 .experience_company {
-    font-size: 19px;
+    font-size: 17px;
+}
+
+.experience_summary {
+    font-size: 17px;
+    margin-top: 10px;
+    padding-left: 20px;
 }
 
 .project, .education {
@@ -94,7 +100,7 @@ hr {
 }
 
 .section-title {
-    font-size: 1.875em;
+    font-size: 1.5em;
     font-family: 'Karla', sans-serif;
 }
 
@@ -108,7 +114,7 @@ hr {
 }
 
 a {
-    color: #37352f;
+    color: purple;
     opacity: 0.9;
 }
 
