@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 href="/#projects"
                 class="block md:px-4 transition hover:text-purple-700"
               >
-                <span>Project</span>
+                <span>Projects</span>
               </a>
             </li>
             <li>
