@@ -76,6 +76,14 @@ document.addEventListener("DOMContentLoaded", function () {
             </li>
             <li>
               <a
+                href="/resume.html"
+                class="block md:px-4 transition hover:text-purple-700 hover:text-[18px]"
+              >
+                <span>Resume</span>
+              </a>
+            </li>
+            <li>
+              <a
                 href="/#contact"
                 class="block md:px-4 transition hover:text-purple-700 hover:text-[18px]"
               >
@@ -130,6 +138,11 @@ document.addEventListener("DOMContentLoaded", function () {
               href="/#projects"
               class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-purple-700 hover:underline hover:text-purple-700"
               >Projects</a
+            >
+            <a
+              href="/resume.html"
+              class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-purple-700 hover:underline hover:text-purple-700"
+              >Resume</a
             >
             <a
               href="/#contact"
