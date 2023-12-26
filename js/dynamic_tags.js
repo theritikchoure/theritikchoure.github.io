@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let navbarElement = document.getElementById("navbar");
   let footerElement = document.getElementById("footer");
   let backToTopBtnElement = document.getElementById("backToTopBtn");
+  let contactSectionElement = document.getElementById("contact");
 
   // Define the HTML code snippet
 
@@ -52,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li>
               <a
                 href="/about.html"
-                class="block md:px-4 transition hover:text-purple-700"
+                class="block md:px-4 transition hover:text-purple-700 hover:text-[18px]"
               >
                 <span>About</span>
               </a>
@@ -60,15 +61,15 @@ document.addEventListener("DOMContentLoaded", function () {
             <li>
               <a
                 href="/blogs.html"
-                class="block md:px-4 transition hover:text-purple-700"
+                class="block md:px-4 transition hover:text-purple-700 hover:text-[18px]"
               >
-                <span>Blog</span>
+                <span>Blogs</span>
               </a>
             </li>
             <li>
               <a
                 href="/#projects"
-                class="block md:px-4 transition hover:text-purple-700"
+                class="block md:px-4 transition hover:text-purple-700 hover:text-[18px]"
               >
                 <span>Projects</span>
               </a>
@@ -76,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li>
               <a
                 href="/#contact"
-                class="block md:px-4 transition hover:text-purple-700"
+                class="block md:px-4 transition hover:text-purple-700 hover:text-[18px]"
               >
                 <span>Contact</span>
               </a>
@@ -225,10 +226,29 @@ document.addEventListener("DOMContentLoaded", function () {
   </svg>
 </button>`;
 
+  let contactSectionCode = `<div class="px-12 py-16 md:px-56">
+  <div class="mb-12">
+    <h2 class="text-5xl text-center font-semibold text-gray-800">
+      Get in touch with me
+    </h2>
+  </div>
+  <div class="flex justify-center">
+    <a
+      class="bg-purple-500 text-white px-7 py-4 cursor-pointer hover:bg-purple-700 hover:scale-105"
+      href="mailto:contact@ritikchourasiya.com"
+    >
+      Contact me
+    </a>
+  </div>
+</div>`;
+
   // Insert the HTML code into the target element
-  navbarElement.innerHTML = navbarCode;
-  footerElement.innerHTML = footerCode;
-  backToTopBtnElement.innerHTML = backToTopBtnCode;
+  if (navbarElement) navbarElement.innerHTML = navbarCode;
+  if (footerElement) footerElement.innerHTML = footerCode;
+  if (backToTopBtnElement) backToTopBtnElement.innerHTML = backToTopBtnCode;
+
+  if (contactSectionElement)
+    contactSectionElement.innerHTML = contactSectionCode;
 
   let backToTopBtn = document.getElementById("btn-back-to-top");
 
@@ -256,6 +276,5 @@ function backToTop() {
 function onClickMenu() {
   const menus = document.getElementById("menus");
 
-  console.log(menus);
   menus.classList.toggle("hidden");
 }
