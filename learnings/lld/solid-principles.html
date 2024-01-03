@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Low Level Design Notes - Ritik Chourasiya</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/icon.png" />
+
+    <!-- stylesheet -->
+    <!-- <link rel="stylesheet" href="styles/style.css" /> -->
+
+    <!-- google console verification code -->
+    <meta
+      name="google-site-verification"
+      content="6ofX_RKaR2tpGrqbRmIsRxaool74YDjaXWOMf7Ar80A"
+    />
+
+    <!-- Meta Tags -->
+    <meta name="title" content="Ritik Chourasiya - Backend Developer" />
+    <meta
+      name="description"
+      content="I'm a 22-year-old, still, undergraduate backend developer based in India, with 2 years of experience in the software industry."
+    />
+    <meta name="keywords" content="backend developer" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content="theritikchoure" />
+    <link rel="canonical" href="https://theritikchoure.github.io/" />
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://theritikchoure.github.io/" />
+    <meta property="og:title" content="Ritik Chourasiya - Backend Developer" />
+    <meta
+      property="og:description"
+      content="I'm a 22-year-old, still, undergraduate backend developer based in India, with 2 years of experience in the software industry."
+    />
+    <meta
+      property="og:image"
+      content="https://theritikchoure.github.io/favicon.png"
+    />
+
+    <!-- twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://theritikchoure.github.io/" />
+    <meta
+      property="twitter:title"
+      content="Ritik Chourasiya - Backend Developer"
+    />
+    <meta
+      property="twitter:description"
+      content="I'm a 22-year-old, still, undergraduate backend developer based in India, with 2 years of experience in the software industry."
+    />
+    <meta
+      property="twitter:image"
+      content="https://theritikchoure.github.io/favicon.png"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Person",
+        "name": "Ritik Chourasiya",
+        "url": "https://theritikchoure.github.io/",
+        "image": "https://theritikchoure.github.io/favicon.png",
+        "sameAs": [
+          "https://www.facebook.com/ritikkailash",
+          "https://twitter.com/theritikchoure",
+          "https://www.instagram.com/theritikchoure/",
+          "https://www.linkedin.com/in/theritikchoure/",
+          "https://github.com/theritikchoure",
+          "https://theritikchoure.github.io/"
+        ],
+        "jobTitle": "Associate Software Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "DOCFLIQ PVT LTD"
+        }
+      }
+    </script>
+    <style>
+      /* Import Muli font */
+      @import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap");
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Apply font-muli class */
+      .font-muli {
+        font-family: "Muli", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="font-muli">
+    <!-- Hero Section -->
+    <div class="relative w-full font-muli">
+      <div id="navbar"></div>
+    </div>
+
+    <div class="px-4 md:px-56 py-8 pt-24">
+      <h1 class="text-5xl text-center font-normal text-gray-800">
+        SOLID Principles
+      </h1>
+    </div>
+
+    <div class="px-4 lg:px-64 text-lg mb-16">
+      <p class="mt-4 text-gray-700 leading-9 text-center">
+        <a href="#s-principle"> <span class="font-bold text-red-700 text-[24px]">S -</span> Single
+        Responibility Principle</a> <br /> 
+        <a href="#o-principle"><span class="font-bold text-red-700 text-[24px]">O -</span> Open/Closed
+        Principle </a> <br />
+        <a href="#l-principle"><span class="font-bold text-red-700 text-[24px]">L -</span> Liskov
+        Substitution Principle </a> <br />
+        <a href="#i-principle"><span class="font-bold text-red-700 text-[24px]">I -</span> Interface
+        Segmented Principle </a> <br />
+        <a href="#d-principle"><span class="font-bold text-red-700 text-[24px]">D -</span> Dependency
+        Inversion Principle </a> <br />
+      </p>
+      <p class="mt-4 text-gray-700 leading-9">
+        <strong>Advantages of following the solid principles, </strong>
+        Help us to write better code - <br />
+        1. avoid duplicate code <br />
+        2. easy to maintain code<br />
+        3. easy to understand<br />
+        4. flexible software<br />
+        5. reduce complexity<br />
+      </p>
+      <h2 class="mt-8 text-2xl font-bold text-gray-800" id="s-principle">
+        S - Single Responibility Principle
+      </h2>
+      <p class="mt-4 text-gray-700 leading-9">
+        A class should have only one Responibility and one reason to change.
+      </p>
+      <pre class="block bg-gray-800 text-white p-4 rounded shadow-2xl">
+        <code >
+// Without adhering to SRP
+class Report {
+  constructor(title, content) {
+    this.title = title;
+    this.content = content;
+  }
+
+  generateReport() {
+    console.log(`Generating report for ${this.title}:\n${this.content}`);
+  }
+
+  saveToDatabase() {
+    console.log(`Saving report to the database: ${this.title}`);
+  }
+}
+
+// With SRP
+class Report {
+  constructor(title, content) {
+    this.title = title;
+    this.content = content;
+  }
+
+  generateReport() {
+    console.log(`Generating report for ${this.title}:\n${this.content}`);
+  }
+}
+
+class ReportSaver {
+  saveToDatabase(report) {
+    console.log(`Saving report to the database: ${report.title}`);
+  }
+}
+
+// Usage
+const report = new Report("Monthly Report", "This is the content of the report.");
+report.generateReport();
+
+const reportSaver = new ReportSaver();
+reportSaver.saveToDatabase(report);
+        </code>
+      </pre>
+
+      <h2 class="mt-8 text-2xl font-bold text-gray-800" id="o-principle">
+        O - Open/Closed Principle
+      </h2>
+      <p class="mt-4 text-gray-700 leading-9">
+        <strong>Open</strong> for extension but <strong>Closed</strong> for
+        modification
+      </p>
+      <pre class="block bg-gray-800 text-white p-4 rounded shadow-2xl">
+        <code>
+// Without adhering to OCP
+
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  calculateArea() {
+    return this.width * this.height;
+  }
+}
+
+// Now, imagine there's a requirement to add support for calculating the perimeter.
+
+// Without OCP, you might be tempted to modify the existing class:
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  calculateArea() {
+    return this.width * this.height;
+  }
+
+  calculatePerimeter() {
+    return 2 * (this.width + this.height);
+  }
+}
+
+// With OCP
+
+// Instead, you can create an interface or abstract class
+class Shape {
+  calculateArea() {
+    throw new Error("Method not implemented");
+  }
+}
+
+// Extend the Shape class with the specific implementation (Rectangle)
+class Rectangle extends Shape {
+  constructor(width, height) {
+    super();
+    this.width = width;
+    this.height = height;
+  }
+
+  calculateArea() {
+    return this.width * this.height;
+  }
+}
+
+// Now, you can easily add new shapes without modifying existing code
+class Circle extends Shape {
+  constructor(radius) {
+    super();
+    this.radius = radius;
+  }
+
+  calculateArea() {
+    return Math.PI * Math.pow(this.radius, 2);
+  }
+}
+
+        </code>
+      </pre>
+
+      <h2 class="mt-8 text-2xl font-bold text-gray-800" id="l-principle">
+        L - Liskov Substitution Principle
+      </h2>
+      <p class="mt-4 text-gray-700 leading-9">
+        If class B is a subtype of class A, then we should be able to replace
+        object of A with B without breaking the behavior of the program
+      </p>
+      <pre class="block bg-gray-800 text-white p-4 rounded shadow-2xl">
+        <code>
+// Without adhering to LSP
+
+class Bird {
+  fly() {
+    console.log("Flying...");
+  }
+}
+
+class Penguin extends Bird {
+  // Penguins cannot fly, but we are violating LSP by not providing a fly method
+}
+
+// Usage
+
+function makeBirdFly(bird) {
+  bird.fly();
+}
+
+const bird = new Bird();
+const penguin = new Penguin();
+
+makeBirdFly(bird);    // Outputs: Flying...
+makeBirdFly(penguin); // Error or unexpected behavior because penguins can't fly
+
+// Adhering to LSP
+
+class Bird {
+  fly() {
+    console.log("Flying...");
+  }
+}
+
+class Penguin extends Bird {
+  fly() {
+    console.log("Penguins can't fly!");
+  }
+}
+
+// Usage
+
+function makeBirdFly(bird) {
+  bird.fly();
+}
+
+const bird = new Bird();
+const penguin = new Penguin();
+
+makeBirdFly(bird);    // Outputs: Flying...
+makeBirdFly(penguin); // Outputs: Penguins can't fly!
+
+        </code>
+      </pre>
+
+      <h2 class="mt-8 text-2xl font-bold text-gray-800" id="i-principle">
+        I - Interface Segmented Principle
+      </h2>
+      <p class="mt-4 text-gray-700 leading-9">
+        Interfaces should be such, that client should
+        <strong>not</strong> implement unnecessary functions they do not need.
+      </p>
+      <pre class="block bg-gray-800 text-white p-4 rounded shadow-2xl">
+        <code>
+// Without adhering to ISP
+
+// A monolithic interface with methods for both printing and scanning
+class MultiFunctionDevice {
+  print() {
+    console.log("Printing...");
+  }
+
+  scan() {
+    console.log("Scanning...");
+  }
+}
+
+// Classes that implement the monolithic interface
+class Printer extends MultiFunctionDevice {}
+
+class Scanner extends MultiFunctionDevice {}
+
+// Usage
+
+const printer = new Printer();
+const scanner = new Scanner();
+
+printer.print(); // Outputs: Printing...
+printer.scan();  // Outputs: Scanning...
+
+scanner.print(); // Outputs: Printing... (Unexpected behavior for a scanner)
+scanner.scan();  // Outputs: Scanning...
+
+// Adhering to ISP
+
+// Separate interfaces for printing and scanning
+class Printer {
+  print() {
+    console.log("Printing...");
+  }
+}
+
+class Scanner {
+  scan() {
+    console.log("Scanning...");
+  }
+}
+
+// Usage
+
+const printer = new Printer();
+const scanner = new Scanner();
+
+printer.print(); // Outputs: Printing...
+
+scanner.scan();  // Outputs: Scanning...
+// scanner.print(); // Error - 'print' is not a function for a Scanner
+
+        </code>
+      </pre>
+
+      <h2 class="mt-8 text-2xl font-bold text-gray-800" id="d-principle">
+        D - Dependency Inversion Principle
+      </h2>
+      <p class="mt-4 text-gray-700 leading-9">
+        Class should depend on interface rather than
+        <strong>concrete classes</strong>.
+      </p>
+      <pre class="block bg-gray-800 text-white p-4 rounded shadow-2xl">
+        <code>
+// Without DIP
+
+class Switch {
+  turnOn() {
+    console.log("Device turned on");
+  }
+
+  turnOff() {
+    console.log("Device turned off");
+  }
+}
+
+class Fan extends Switch {
+  // Fan-specific functionality
+}
+
+// Usage
+
+const fanSwitch = new Fan();
+fanSwitch.turnOn();  // Outputs: Device turned on
+fanSwitch.turnOff(); // Outputs: Device turned off
+-------
+// Adhering to DIP
+
+// Abstraction
+class Switchable {
+  turnOn() {
+    throw new Error("Method not implemented");
+  }
+
+  turnOff() {
+    throw new Error("Method not implemented");
+  }
+}
+
+// Low-level module
+class Switch extends Switchable {
+  turnOn() {
+    console.log("Device turned on");
+  }
+
+  turnOff() {
+    console.log("Device turned off");
+  }
+}
+
+// High-level module
+class Fan {
+  constructor(device) {
+    this.device = device;
+  }
+
+  operate() {
+    this.device.turnOn();
+    // Additional fan-specific logic here
+    this.device.turnOff();
+  }
+}
+
+// Usage
+
+const switchableDevice = new Switch();
+const fan = new Fan(switchableDevice);
+
+fan.operate();  // Outputs: Device turned on, Device turned off
+
+        </code>
+      </pre>
+
+      <h2 class="mt-8 text-2xl font-bold text-gray-800" id="d-principle">
+        Video Resource
+      </h2>
+      <iframe class="mt-6 h-[18rem] md:h-[28rem] lg:h-[38rem]" width="100%" src="https://www.youtube.com/embed/XI7zep97c-Y?list=PL6W8uoQQ2c61X_9e6Net0WdYZidm7zooW" title="1. SOLID Principles with Easy Examples | OOPs SOLID Principles Interview Question - Low Level Design" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <!-- Footer Section -->
+    <div id="footer"></div>
+    <div id="backToTopBtn"></div>
+
+    <script src="../../js/dynamic_tags.js"></script>
+  </body>
+</html>
