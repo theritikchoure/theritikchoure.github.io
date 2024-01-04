@@ -149,6 +149,11 @@ document.addEventListener("DOMContentLoaded", function () {
               class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-purple-700 hover:underline hover:text-purple-700"
               >Contact</a
             >
+            <a
+              href="/learnings/index.html"
+              class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-purple-700 hover:underline hover:text-purple-700"
+              >Learnings</a
+            >
           </div>
         </div>
 
