@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Low Level Design Notes - Ritik Chourasiya</title>
+    <title>SOLID Principles - Ritik Chourasiya</title>
 
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="/icon.png" />
@@ -107,37 +107,85 @@
     </div>
 
     <div class="px-4 md:px-56 py-8 pt-24">
-      <h1 class="text-5xl text-center font-normal text-gray-800">LLD TOPICS</h1>
+      <h1 class="text-5xl text-center font-normal text-gray-800">
+        IS-A and HAS-A Relationship With Example in JavaScript
+      </h1>
     </div>
 
     <div class="px-4 lg:px-64 text-lg mb-16">
-      <div class="flex flex-wrap -mx-4">
-        <!-- Column 1 -->
-        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 px-4 mb-4">
-          <!-- Your content for column 1 goes here -->
-          <h4 class="text-xl font-bold mt-4">LLD - Patterns</h4>
-          <p class="mt-4 text-gray-700 leading-9 underline">
-            <a href="/learnings/lld/patterns.html#strategy-pattern">Strategy Pattern </a><br />
-            Observer Pattern <br />
-            Decorator Pattern <br />
-            Factory Pattern <br />
-            Abstract Factory Pattern <br />
-          </p>
-        </div>
+      <h2 class="mt-8 text-2xl font-bold text-gray-800" id="s-principle">
+        Is-a Relationship:
+      </h2>
+      <p class="mt-4 text-gray-700 leading-9">
+        - An "is-a" relationship represents inheritance or specialization, where
+        one class is a subtype of another. <br />
+        - It implies that an object of the derived class is also an object of
+        the base class. <br />
+        - In JavaScript, this is achieved through prototype-based inheritance or
+        class-based inheritance. <br />
+      </p>
 
-        <!-- Column 2 -->
-        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 px-4 mb-4">
-          <!-- Your content for column 2 goes here -->
-          <h4 class="text-xl font-bold mt-4">
-            LLD - Topics and Interview Questions
-          </h4>
-          <p class="mt-4 text-gray-700 leading-9 underline">
-            <a href="/learnings/lld/solid-principles.html">SOLID Principles</a><br>
-            <a href="/learnings/lld/is-a-has-a-relationship.html">IS-A and HAS-A Relationship With Example</a><br>
-            <a href="/learnings/lld/uml-diagram.html">UML Diagram - Quick Revision</a><br>
-          </p>
-        </div>
-      </div>
+      <h2 class="mt-8 text-2xl font-bold text-gray-800" id="s-principle">
+        Has-a Relationship:
+      </h2>
+      <p class="mt-4 text-gray-700 leading-9">
+        - A "has-a" relationship represents composition or aggregation, where
+        one class has another class as a part or member. <br />
+        - It implies that an object of one class contains an object of another
+        class. <br />
+      </p>
+      <pre class="block bg-gray-800 text-white p-4 rounded shadow-2xl">
+        <code>
+// Base class representing a Vehicle
+class Vehicle {
+    drive() {
+    console.log(`Vehicle is moving.`);
+    }
+}
+
+// Engine class representing a part of a Vehicle
+class Engine {
+    start() {
+    console.log("Engine started.");
+    }
+}
+
+// Maruti class representing a specific type of Vehicle (is-a relationship with Vehicle)
+class Maruti extends Vehicle {
+    constructor() {
+    super(); // Call the constructor of the base class (Vehicle)
+
+    // Engine as a part of Maruti (has-a relationship with Engine)
+    this.engine = new Engine();
+    }
+
+    honk() {
+    console.log(`Maruti is honking.`);
+    }
+}
+
+// Creating objects
+const myMaruti = new Maruti();
+myMaruti.drive(); // Inherited from Vehicle
+myMaruti.honk();  // Specific to Maruti
+myMaruti.engine.start();  // Part of Maruti
+        </code>
+      </pre>
+
+      <p class="mt-4 text-gray-700 leading-9">
+        - <strong>Vehicle</strong> represents a generic vehicle and serves as
+        the base class. <br />
+        - <strong>Engine</strong> is a separate class representing a part of a
+        vehicle (has-a relationship). <br />
+        - <strong>Maruti</strong> is a specific type of vehicle (is-a
+        relationship with <strong>Vehicle</strong>) and contains an
+        <strong>Engine</strong> as a part (has-a relationship with
+        <strong>Engine</strong>). <br /> <br>
+        This structure better reflects the "is-a" and "has-a" relationships
+        between the classes.
+      </p>
+
+      <img src="/images/is-a-has-a-relation.png" alt="" srcset="" class="mt-12 mx-auto">
     </div>
 
     <!-- Footer Section -->

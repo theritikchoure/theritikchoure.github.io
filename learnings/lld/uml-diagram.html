@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Low Level Design Notes - Ritik Chourasiya</title>
+    <title>UML Diagram Notes - Ritik Chourasiya</title>
 
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="/icon.png" />
@@ -107,37 +107,71 @@
     </div>
 
     <div class="px-4 md:px-56 py-8 pt-24">
-      <h1 class="text-5xl text-center font-normal text-gray-800">LLD TOPICS</h1>
+      <h1 class="text-5xl text-center font-normal text-gray-800">
+        UML Diagram - Quick Revision
+      </h1>
     </div>
 
     <div class="px-4 lg:px-64 text-lg mb-16">
-      <div class="flex flex-wrap -mx-4">
-        <!-- Column 1 -->
-        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 px-4 mb-4">
-          <!-- Your content for column 1 goes here -->
-          <h4 class="text-xl font-bold mt-4">LLD - Patterns</h4>
-          <p class="mt-4 text-gray-700 leading-9 underline">
-            <a href="/learnings/lld/patterns.html#strategy-pattern">Strategy Pattern </a><br />
-            Observer Pattern <br />
-            Decorator Pattern <br />
-            Factory Pattern <br />
-            Abstract Factory Pattern <br />
-          </p>
-        </div>
+      <h2 class="mt-8 text-2xl font-bold text-gray-800" id="s-principle">
+        Class and Interface Representation -
+      </h2>
+      <img src="/images/class-interface-representation.png" alt="" srcset="" class="mt-12 mx-auto">
 
-        <!-- Column 2 -->
-        <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 px-4 mb-4">
-          <!-- Your content for column 2 goes here -->
-          <h4 class="text-xl font-bold mt-4">
-            LLD - Topics and Interview Questions
-          </h4>
-          <p class="mt-4 text-gray-700 leading-9 underline">
-            <a href="/learnings/lld/solid-principles.html">SOLID Principles</a><br>
-            <a href="/learnings/lld/is-a-has-a-relationship.html">IS-A and HAS-A Relationship With Example</a><br>
-            <a href="/learnings/lld/uml-diagram.html">UML Diagram - Quick Revision</a><br>
-          </p>
+      <h2 class="mt-8 text-2xl font-bold text-gray-800" id="s-principle">
+        Class Relationship -
+      </h2>
+      <p class="mt-4 text-gray-700 leading-9">
+        It defines how classes are connected or related to each other.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold text-gray-800" id="s-principle">
+        Association Relationship
+      </h2>
+      <p class="mt-4 text-gray-700 leading-9">
+        It represents relationship b/w two classes where one is related to another in some way. It can be simple connection or have attributes associated with it.
+        <br>
+        <div class="px-6">
+            <h3 class="mt-8 text-xl font-bold text-gray-800" id="s-principle">
+                Bidirectional Association Relationship
+              </h3>
+              <p class="mt-4 text-gray-700 leading-9">
+                Both class can call each other
+              </p>
+              <img src="/images/bidirection-association.png" alt="" srcset="" class="mt-6 mx-auto">
+
+              <h3 class="mt-8 text-xl font-bold text-gray-800" id="s-principle">
+                Unidirectional Association Relationship
+              </h3>
+              <p class="mt-4 text-gray-700 leading-9">
+                This association is only in one direction. This means that one class knows about other, but the reverse may not be true.
+              </p>
+              <img src="/images/unidirection-association.png" alt="" srcset="" class="mt-6 mx-auto">
+              <p class="mt-4 text-gray-700 leading-9 italic">
+                <span class="font-bold">Note -</span> `Person` can call `Address`, but `Address` cannot call `Person` 
+              </p>
+              <h3 class="mt-8 text-xl font-bold text-gray-800" id="s-principle">
+                Multiplicity Association Relationship
+              </h3>
+              <p class="mt-4 text-gray-700 leading-9">
+                It describes the number of instances of one class associated with a single instance of another class.
+              </p>
+              <p class="mt-4 ml-4 text-gray-700 leading-9 italic">
+                <span class="font-bold">Role -</span> It defines the responsibility or purpose of the associated class in the context of relationship. 
+              </p>
+              <img src="/images/multiplication-association.png" alt="" srcset="" class="mt-6 mx-auto">
         </div>
-      </div>
+      </p>
+      <h2 class="mt-8 text-2xl font-bold text-gray-800" id="s-principle">
+        Aggregation and Composition Relationship
+      </h2>
+      <p class="mt-4 text-gray-700 leading-9">
+        Both comes under <i class="bg-gray-200">has-a</i> relationship <br>
+
+        - Aggregation - One class can exist without other class <br>
+        - Composition - One class cannot exists without other class <br>
+      </p>
+      <img src="/images/other-uml-relationship.png" alt="" srcset="" class="mt-12 mx-auto">
     </div>
 
     <!-- Footer Section -->
