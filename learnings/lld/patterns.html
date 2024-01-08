@@ -1,148 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LLD Patterns - Ritik Chourasiya</title>
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>LLD Patterns - Ritik Chourasiya</title>
+      <!-- favicon -->
+      <link rel="icon" type="image/x-icon" href="/icon.png" />
+      <!-- stylesheet -->
+      <!-- <link rel="stylesheet" href="styles/style.css" /> -->
+      <!-- google console verification code -->
+      <meta
+         name="google-site-verification"
+         content="6ofX_RKaR2tpGrqbRmIsRxaool74YDjaXWOMf7Ar80A"
+         />
+      <!-- Meta Tags -->
+      <meta name="title" content="Ritik Chourasiya - Backend Developer" />
+      <meta
+         name="description"
+         content="I'm a 22-year-old, still, undergraduate backend developer based in India, with 2 years of experience in the software industry."
+         />
+      <meta name="keywords" content="backend developer" />
+      <meta name="robots" content="index, follow" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="language" content="English" />
+      <meta name="author" content="theritikchoure" />
+      <link rel="canonical" href="https://theritikchoure.github.io/" />
+      <!-- Open Graph Tags -->
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://theritikchoure.github.io/" />
+      <meta property="og:title" content="Ritik Chourasiya - Backend Developer" />
+      <meta
+         property="og:description"
+         content="I'm a 22-year-old, still, undergraduate backend developer based in India, with 2 years of experience in the software industry."
+         />
+      <meta
+         property="og:image"
+         content="https://theritikchoure.github.io/favicon.png"
+         />
+      <!-- twitter -->
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="https://theritikchoure.github.io/" />
+      <meta
+         property="twitter:title"
+         content="Ritik Chourasiya - Backend Developer"
+         />
+      <meta
+         property="twitter:description"
+         content="I'm a 22-year-old, still, undergraduate backend developer based in India, with 2 years of experience in the software industry."
+         />
+      <meta
+         property="twitter:image"
+         content="https://theritikchoure.github.io/favicon.png"
+         />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <!-- Schema Markup -->
+      <script type="application/ld+json">
+         {
+           "@context": "https://schema.org/",
+           "@type": "Person",
+           "name": "Ritik Chourasiya",
+           "url": "https://theritikchoure.github.io/",
+           "image": "https://theritikchoure.github.io/favicon.png",
+           "sameAs": [
+             "https://www.facebook.com/ritikkailash",
+             "https://twitter.com/theritikchoure",
+             "https://www.instagram.com/theritikchoure/",
+             "https://www.linkedin.com/in/theritikchoure/",
+             "https://github.com/theritikchoure",
+             "https://theritikchoure.github.io/"
+           ],
+           "jobTitle": "Associate Software Engineer",
+           "worksFor": {
+             "@type": "Organization",
+             "name": "DOCFLIQ PVT LTD"
+           }
+         }
+      </script>
+      <style>
+         /* Import Muli font */
+         @import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap");
+         html {
+         scroll-behavior: smooth;
+         }
+         /* Apply font-muli class */
+         .font-muli {
+         font-family: "Muli", sans-serif;
+         }
+      </style>
+   </head>
+   <body class="font-muli">
+      <!-- Hero Section -->
+      <div class="relative w-full font-muli">
+         <div id="navbar"></div>
+      </div>
+      <div class="px-4 md:px-56 py-8 pt-24">
+         <h1 class="text-5xl text-center font-normal text-gray-800">
+            Design Patterns
+         </h1>
+      </div>
+      <div class="px-4 lg:px-64 text-lg mb-16">
+         <p class="mt-4 text-gray-700 leading-9">
+            <strong>Design Pattern</strong> thumbrules or different concepts using which you can solve the problem of modelling real world examples into object oriented design.
+         </p>
+         <p class="mt-4 text-gray-700 leading-9">
+            <b>Design Patterns as Thumb Rules:</b>
+            <div class="px-6">
+                <li>Design patterns serve as thumb rules or concepts to model real-world problems into object-oriented design.</li>
+                <li>They are not language-specific; different languages may implement them in various ways.</li>
+            </div>
+            <br>
+            <b>Implementation Variations:</b>
+            <div class="px-6">
+                <li>Each design pattern has different implementations based on the programming language.</li>
+                <li>
+                  Design patterns are agnostic to languages, representing concepts and principles.
+                </li>
+            </div>
+            <br>
+            <b>
+            Organizing Design Patterns:
+            </b>
+            <div class="px-6">
+                <li>
+                  Design patterns help organize classes, objects, and their behavior and communication.
+                </li>
+                <li>
+                  Patterns can be categorized based on their purpose: Creational, Structural, and Behavioral.
+                </li>
+            </div>
+            <br>
+            <b>
+            Purpose-Based Categorization:
+            </b>
+            <div class="px-6">
+                <li>
+                  <b>
+                  Creational Patterns:
+                  </b>
+                  Focus on creating classes or objects and instantiating objects.
+                </li>
+                <li>
+                  <b>
+                  Structural Patterns:
+                  </b>
+                  Involve structuring multiple classes and objects, including inheritance and interface segregation.
+                </li>
+                <li>
+                  <b>
+                  Behavioral Patterns:
+                  </b>
+                  Address how objects and classes communicate to fulfill complex business use cases.
+                </li>
+            </div>
+            <br>
+            <b>
+            Categorization by Classes and Objects:
+            </b>
+            <div class="px-6">
+                <li>
+                  Patterns can be further classified based on whether they are applicable to classes or objects.
+                </li>
+                <li>
+                  Most patterns work on objects, but some are applied specifically to classes.
+                </li>
+            </div>
+            <br>
+            <b>
+            Understanding Categories:
+            </b>
+            <div class="px-6">
+                <li><b>Creational Class Patterns:</b> Guide how to create classes.</li>
+                <li><b>Creational Object Patterns:</b> Focus on instantiating objects for different classes.</li>
+                <li><b>Structural Class Patterns:</b> Instruct on using inheritance for structuring.</li>
+                <li><b>Structural Object Patterns:</b> Explain how to organize and assemble objects.</li>
+                <li><b>Behavioral Class Patterns:</b> Use inheritance for implementing algorithms and control flow.</li>
+                <li><b>Behavioral Object Patterns:</b> Assemble and write algorithms around objects for complex tasks.</li>
+            </div>
+            <img src="/images/patterns/pattern-classification.png" alt="" srcset="" class="mt-12 mx-auto">
+         </p>
+         <!-- Your content for column 1 goes here -->
+         <h4 class="text-xl font-bold mt-4">LLD - Patterns</h4>
+         <p class="mt-4 text-gray-700 leading-9 underline">
+            <a href="#factory-pattern">Factory Pattern</a> <br>
+            <a href="#abstract-factory-pattern">Abstract Factory Pattern</a> <br>
+            <a href="#singleton-pattern">Singleton Pattern</a> <br>
+            <a href="#strategy-pattern">Strategy Pattern </a><br>
+            Observer Pattern <br>
+            Decorator Pattern <br>
+         </p>
+         <h2 class="mt-8 text-2xl font-bold text-gray-800" id="factory-pattern">
+            Factory Pattern
+         </h2>
+         <p class="mt-4 text-gray-700 leading-9">
+            It is <strong>creational pattern</strong> that provides an interface for creating instances of a class, with its subclasses deciding which class to instantiate. 
+         </p>
+         <img src="/images/patterns/factory-pattern.png" alt="" srcset="" class="mt-12 mx-auto">
+         <h2 class="mt-8 text-2xl font-bold text-gray-800" id="abstract-factory-pattern">
+            Abstract Factory Pattern
+         </h2>
+         <p class="mt-4 text-gray-700 leading-9">
+            It is <strong>Factory of Factory</strong>. when we have different object but we can group them in any way. 
+         </p>
+         <img src="/images/patterns/abstract-factory-pattern.png" alt="" srcset="" class="mt-12 mx-auto">
+         <h2 class="mt-8 text-2xl font-bold text-gray-800" id="strategy-pattern">
+            Singleton Pattern
+         </h2>
+         <p class="mt-4 text-gray-700 leading-9">
+            It is <strong>Class Creational design pattern</strong>. Singleton means we will create single instance of a class. Make sure that there is no other instance created for this class.
+         </p>
+         <img src="/images/patterns/singleton-pattern.png" alt="" srcset="" class="mt-12 mx-auto">
+         <h2 class="mt-8 text-2xl font-bold text-gray-800" id="strategy-pattern">
+            Observer Pattern
+         </h2>
+         <p class="mt-4 text-gray-700 leading-9">
+            The Observer pattern is a behavioral design pattern where an object, known as the subject, maintains a list of its dependents, known as observers, that are notified of any changes in the subject's state. This pattern is commonly used to implement distributed event handling systems.
+         </p>
+         <img src="/images/patterns/observer-pattern.png" alt="" srcset="" class="mt-12 mx-auto">
+         <h2 class="mt-8 text-2xl font-bold text-gray-800" id="strategy-pattern">
+            Strategy Pattern
+         </h2>
+         <p class="mt-4 text-gray-700 leading-9">
+            The strategy pattern is a behavioral design pattern that enables selecting an algorithm at runtime. Instead of implementing a single algorithm directly, code receives run-time instructions as to which in a family of algorithms to use.
+            <br><br>
+            Strategy pattern, we are trying to separate out dependency of drive from the main class  as much as possible by making various strategies to inject it dynamically based on client requirement so that in future if new requirement for drive comes, there will be minimal/no changes in existing code(Open closed Principle).
+         </p>
+         <img src="/images/patterns/strategy-pattern.jpg" alt="" srcset="" class="mt-12 mx-auto">
+         <pre class="block bg-gray-800 text-white p-4 rounded shadow-2xl">
+            <code>
+// With Strategy Pattern
+class VehicleWithStrategy {
+  constructor(make, model, driveStrategy) {
+    this.make = make;
+    this.model = model;
+    this.driveStrategy = driveStrategy;
+  }
 
-    <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="/icon.png" />
+  setDriveStrategy(driveStrategy) {
+    this.driveStrategy = driveStrategy;
+  }
 
-    <!-- stylesheet -->
-    <!-- <link rel="stylesheet" href="styles/style.css" /> -->
+  drive(speed) {
+    this.driveStrategy.drive(speed, this.make);
+  }
+}
 
-    <!-- google console verification code -->
-    <meta
-      name="google-site-verification"
-      content="6ofX_RKaR2tpGrqbRmIsRxaool74YDjaXWOMf7Ar80A"
-    />
+// Strategies
+class CarDriveStrategy {
+  drive(speed, make) {
+    console.log(`Driving the ${make} at ${speed} km/h.`);
+  }
+}
 
-    <!-- Meta Tags -->
-    <meta name="title" content="Ritik Chourasiya - Backend Developer" />
-    <meta
-      name="description"
-      content="I'm a 22-year-old, still, undergraduate backend developer based in India, with 2 years of experience in the software industry."
-    />
-    <meta name="keywords" content="backend developer" />
-    <meta name="robots" content="index, follow" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="language" content="English" />
-    <meta name="author" content="theritikchoure" />
-    <link rel="canonical" href="https://theritikchoure.github.io/" />
+class MotorcycleDriveStrategy {
+  drive(speed, make) {
+    console.log(`Riding the ${make} at ${speed} km/h.`);
+  }
+}
 
-    <!-- Open Graph Tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://theritikchoure.github.io/" />
-    <meta property="og:title" content="Ritik Chourasiya - Backend Developer" />
-    <meta
-      property="og:description"
-      content="I'm a 22-year-old, still, undergraduate backend developer based in India, with 2 years of experience in the software industry."
-    />
-    <meta
-      property="og:image"
-      content="https://theritikchoure.github.io/favicon.png"
-    />
+// Usage with Strategy Pattern
+const carWithStrategy = new VehicleWithStrategy('Car', 'Sedan', new CarDriveStrategy());
+carWithStrategy.drive(120);
 
-    <!-- twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://theritikchoure.github.io/" />
-    <meta
-      property="twitter:title"
-      content="Ritik Chourasiya - Backend Developer"
-    />
-    <meta
-      property="twitter:description"
-      content="I'm a 22-year-old, still, undergraduate backend developer based in India, with 2 years of experience in the software industry."
-    />
-    <meta
-      property="twitter:image"
-      content="https://theritikchoure.github.io/favicon.png"
-    />
+const motorcycleWithStrategy = new VehicleWithStrategy('Motorcycle', 'Sport', new MotorcycleDriveStrategy());
+motorcycleWithStrategy.drive(80);
 
-    <script src="https://cdn.tailwindcss.com"></script>
+// Changing strategy dynamically
+carWithStrategy.setDriveStrategy(new MotorcycleDriveStrategy());
+carWithStrategy.drive(90);
 
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org/",
-        "@type": "Person",
-        "name": "Ritik Chourasiya",
-        "url": "https://theritikchoure.github.io/",
-        "image": "https://theritikchoure.github.io/favicon.png",
-        "sameAs": [
-          "https://www.facebook.com/ritikkailash",
-          "https://twitter.com/theritikchoure",
-          "https://www.instagram.com/theritikchoure/",
-          "https://www.linkedin.com/in/theritikchoure/",
-          "https://github.com/theritikchoure",
-          "https://theritikchoure.github.io/"
-        ],
-        "jobTitle": "Associate Software Engineer",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "DOCFLIQ PVT LTD"
-        }
-      }
-    </script>
-    <style>
-      /* Import Muli font */
-      @import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap");
+            </code>
+         </pre>
 
-      html {
-        scroll-behavior: smooth;
-      }
+         <h2 class="mt-8 text-2xl font-bold text-gray-800" id="strategy-pattern">
+            Builder Pattern
+         </h2>
+         <p class="mt-4 text-gray-700 leading-9">
+            The Builder Pattern is a creational design pattern that is used to construct a complex object step by step. This pattern is particularly useful when an object needs to be created with many optional components or configurations. 
+         </p>
+         <p class="mt-4 text-gray-700 leading-9">
+            <strong>Example</strong><br>
+            
+Let's consider a scenario where we need to create a complex object, such as a Car, with many optional components and configurations. Without the Builder Pattern, you might end up with a constructor that has numerous parameters, making it hard to read, understand, and use correctly. Additionally, not all components are required, and providing default values for each optional component in the constructor could lead to a bloated and inflexible design.
+<br><br>
+In this example, creating a Car object requires specifying many parameters, including optional ones. This can lead to confusion about the order of parameters and may result in errors if the wrong values are provided. Additionally, it doesn't provide a clear way to create a Car without specifying all optional components.
+<br><br>
+With the Builder Pattern, you can create a Car instance step by step. You only set the components you care about, and the builder provides a clean and readable API for constructing the object. This makes the code more maintainable, and it's easier to understand which components are being configured without the need for a long parameter list. Additionally, it allows for a more flexible and extensible design, as new components or configurations can be added to the builder without modifying the product's class.
+         </p>
+         <pre class="block bg-gray-800 text-white p-4 rounded shadow-2xl">
+            <code>
+// without builder pattern 
+class Car {
+    constructor(name, color, year, bluetooth, sunroof, rare_camera, front_camera) {
+        this.name = name;
+        this.color = color;
+        this.year = year;
+        this.bluetooth = bluetooth;
+        this.sunroof = sunroof;
+        this.rare_camera = rare_camera;
+        this.front_camera = front_camera;
+    }
 
-      /* Apply font-muli class */
-      .font-muli {
-        font-family: "Muli", sans-serif;
-      }
-    </style>
-  </head>
+    describe() {
+        console.log(`${this.name} ${this.color} ${this.year}`)
+    }
+}
 
-  <body class="font-muli">
-    <!-- Hero Section -->
-    <div class="relative w-full font-muli">
-      <div id="navbar"></div>
-    </div>
+let thar1 = new Car('thar', 'black', 2024);
+let thar2 = new Car('thar', 'black', 2024, false, true, true, false);
 
-    <div class="px-4 md:px-56 py-8 pt-24">
-      <h1 class="text-5xl text-center font-normal text-gray-800">
-        Patterns
-      </h1>
-    </div>
+console.log(thar1)
+console.log(thar2)
 
-    <div class="px-4 lg:px-64 text-lg mb-16">
-       <!-- Your content for column 1 goes here -->
-       <h4 class="text-xl font-bold mt-4">LLD - Patterns</h4>
-       <p class="mt-4 text-gray-700 leading-9 underline">
-         <a href="#strategy-pattern">Strategy Pattern </a><br>
-         Observer Pattern <br>
-         Decorator Pattern <br>
-         Factory Pattern <br>
-         Abstract Factory Pattern <br>
+// with builder pattern
+class CarBuilder {
+    constructor(name, color, year) {
+        this.car = new Car(name, color, year)
+    }
 
-       </p>
+    addBluetooth() {
+        this.car.bluetooth = true
+        return this;
+    }
 
-    
+    addSunroof() {
+        this.car.sunroof = true
+        return this;
+    }
 
-      <h2 class="mt-8 text-2xl font-bold text-gray-800" id="strategy-pattern">
-        Strategy Pattern
-      </h2>
-      <p class="mt-4 text-gray-700 leading-9">
-        The strategy pattern is a behavioral design pattern that enables selecting an algorithm at runtime. Instead of implementing a single algorithm directly, code receives run-time instructions as to which in a family of algorithms to use.
-        <br><br>
-        Strategy pattern, we are trying to separate out dependency of drive from the main class  as much as possible by making various strategies to inject it dynamically based on client requirement so that in future if new requirement for drive comes, there will be minimal/no changes in existing code(Open closed Principle).
-      </p>
-      <img src="/images/patterns/strategy-pattern.jpg" alt="" srcset="" class="mt-12 mx-auto">
+    addRareCamera() {
+        this.car.rare_camera = true;
+        return this;
+    }
 
-      <iframe class="mt-6 h-[18rem] md:h-[28rem] lg:h-[38rem]" width="100%" src="https://www.youtube.com/embed/u8DttUrXtEw?list=PL6W8uoQQ2c61X_9e6Net0WdYZidm7zooW" title="2. Strategy Design Pattern explanation | LLD System Design #1  | Design pattern explanation in Java" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
+    addFrontCamera() {
+        this.car.front_camera = true;
+        return this;
+    }
 
-    <!-- Footer Section -->
-    <div id="footer"></div>
-    <div id="backToTopBtn"></div>
+    build() {
+        return this.car;
+    }
+}
 
-    <script src="../../js/dynamic_tags.js"></script>
-  </body>
+let ertiga = new CarBuilder('ertiga', 'black', 2024).addRareCamera().addSunroof().build();
+
+console.log(ertiga)
+            </code>
+         </pre>
+         <h2 class="mt-8 text-2xl font-bold text-gray-800" id="strategy-pattern">
+            Decorator Pattern
+         </h2>
+         <p class="mt-4 text-gray-700 leading-9">
+            The Decorator Pattern is a structural design pattern that enables the dynamic augmentation of an object's behavior, either at compile-time or runtime, without altering the behavior of other instances of the same class. This pattern is particularly useful when there is a need to extend the functionality of objects in a flexible and reusable manner. 
+            <br><br>
+            The structure of the Decorator Pattern involves a component interface defining the base functionality, concrete components implementing this interface, decorators that conform to the same interface and enhance the behavior of the components, and a client that interacts with the decorated objects. Decorators can be stacked or combined to add multiple functionalities to an object, allowing for a more modular and extensible design without resorting to a multitude of subclassing. 
+            <br><br>
+            This pattern promotes code flexibility and maintainability by providing a means to dynamically tailor the behavior of objects without the need for complex class hierarchies.         
+         </p>
+         <pre class="block bg-gray-800 text-white p-4 rounded shadow-2xl"><code>
+// Problematic implementation without Decorator Pattern
+class Coffee {
+    constructor() {
+        this.description = 'simple coffee',
+        this.cost = 5;
+    }
+
+    getCost() { return this.cost; }
+
+    getDescription() { return this.description; }
+}
+
+
+class CoffeeWithMilk extends Coffee {
+    constructor() {
+        super();
+        this.description = 'coffee with milk';
+        this.cost = 7;
+    }
+
+    getCost() { return this.cost; }
+    getDescription() { return this.description; }
+}
+
+class CoffeeWithSugar extends Coffee {
+    constructor() {
+        super();
+        this.description = 'coffee with sugar';
+        this.cost = 10;
+    }
+
+    getCost() { return this.cost; }
+    getDescription() { return this.description; }
+}
+
+
+class MilkDecorator {
+    constructor(coffee) {
+        this.coffee = coffee;
+    }
+
+    getCost() {
+        return this.coffee.getCost() + 2;
+    }
+
+    getDescription() {
+        return `${this.coffee.getDescription()} with milk`;
+    }
+}
+
+const simpleCoffee = new Coffee;
+
+const milkCoffee = new MilkDecorator(new Coffee());
+
+console.log(milkCoffee.getCost())
+         </code></pre>
+         <h2 class="mt-8 text-2xl font-bold text-gray-800" id="strategy-pattern">
+            Adapter Pattern
+         </h2>
+         <p class="mt-4 text-gray-700 leading-9">
+            <p>The Adapter Pattern is a structural design pattern that allows incompatible interfaces to work together. It acts as a bridge between two incompatible interfaces, making them compatible without altering their source code.
+               <br><br>
+               It is used when you have existing code or components with interfaces that don't match the requirements, and you want them to work together seamlessly.
+            </p>
+         </p>
+         <pre class="mt-2 block bg-gray-800 text-white p-4 rounded shadow-2xl">
+            <code>
+// Existing XML to JSON converter with an incompatible interface
+class XMLtoJSONConverter {
+  convert(xmlData) {
+    // Simulating the existing XML to JSON conversion logic
+    console.log('Converting XML to JSON:', xmlData);
+    const jsonData = { result: 'Converted JSON Data' };
+    return jsonData;
+  }
+}
+
+// New interface expected by the application
+class JSONConverter {
+  convertJSON(jsonData) {
+    console.log('Displaying JSON Data:', jsonData);
+  }
+}
+
+// Adapter to make XMLtoJSONConverter compatible with JSONConverter
+class XMLtoJSONConverterAdapter extends JSONConverter {
+  constructor(xmlToJSONConverter) {
+    super();
+    this.xmlToJSONConverter = xmlToJSONConverter;
+  }
+
+  convertJSON() {
+    const xmlData = '<sample>XML Data</sample>'; // Simulated XML data
+    const jsonData = this.xmlToJSONConverter.convert(xmlData);
+    super.convertJSON(jsonData);
+  }
+}
+
+// Usage with Adapter
+const xmlToJSONConverter = new XMLtoJSONConverter();
+const xmlToJSONConverterAdapter = new XMLtoJSONConverterAdapter(xmlToJSONConverter);
+
+// Now, the XMLtoJSONConverter can be used seamlessly with the JSONConverter interface
+xmlToJSONConverterAdapter.convertJSON();
+            </code>
+         </pre>
+         <h2 class="mt-8 text-2xl font-bold text-gray-800" id="strategy-pattern">
+            Resources
+         </h2>
+         <a href="https://cseweb.ucsd.edu//~wgg/CSE210/ecoop93-patterns.pdf">https://cseweb.ucsd.edu//~wgg/CSE210/ecoop93-patterns.pdf</a>
+      </div>
+      <!-- Footer Section -->
+      <div id="footer"></div>
+      <div id="backToTopBtn"></div>
+      <script src="../../js/dynamic_tags.js"></script>
+   </body>
 </html>
