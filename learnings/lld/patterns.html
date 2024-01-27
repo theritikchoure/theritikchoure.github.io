@@ -419,10 +419,9 @@ console.log(milkCoffee.getCost())
             Adapter Pattern
          </h2>
          <p class="mt-4 text-gray-700 leading-9">
-            <p>The Adapter Pattern is a structural design pattern that allows incompatible interfaces to work together. It acts as a bridge between two incompatible interfaces, making them compatible without altering their source code.
+            The Adapter Pattern is a structural design pattern that allows incompatible interfaces to work together. It acts as a bridge between two incompatible interfaces, making them compatible without altering their source code.
                <br><br>
                It is used when you have existing code or components with interfaces that don't match the requirements, and you want them to work together seamlessly.
-            </p>
          </p>
          <pre class="mt-2 block bg-gray-800 text-white p-4 rounded shadow-2xl">
             <code>
@@ -465,6 +464,72 @@ const xmlToJSONConverterAdapter = new XMLtoJSONConverterAdapter(xmlToJSONConvert
 xmlToJSONConverterAdapter.convertJSON();
             </code>
          </pre>
+         <h2 class="mt-8 text-2xl font-bold text-gray-800" id="strategy-pattern">
+            Facade Pattern
+         </h2>
+         <p class="mt-4 text-gray-700 leading-9">
+            Facade pattern hides the complexities of the system and provides an interface to the client using which the client can access the system. This type of design pattern comes under structural pattern as this pattern adds an interface to existing system to hide its complexities.
+<br><br>
+This pattern involves a single class which provides simplified methods required by client and delegates calls to methods of existing system classes.
+         </p>
+         <pre class="mt-2 block bg-gray-800 text-white p-4 rounded shadow-2xl"><code>
+// Interface: Shape
+class Shape {
+  draw() {
+    console.log("Drawing a shape");
+  }
+}
+
+// Concrete Class: Rectangle
+class Rectangle extends Shape {
+  draw() {
+    console.log("Drawing a Rectangle");
+  }
+}
+
+// Concrete Class: Square
+class Square extends Shape {
+  draw() {
+    console.log("Drawing a Square");
+  }
+}
+
+// Concrete Class: Circle
+class Circle extends Shape {
+  draw() {
+    console.log("Drawing a Circle");
+  }
+}
+
+// Facade: ShapeMaker
+class ShapeMaker {
+  constructor() {
+    this.circle = new Circle();
+    this.rectangle = new Rectangle();
+    this.square = new Square();
+  }
+
+  drawCircle() {
+    this.circle.draw();
+  }
+
+  drawRectangle() {
+    this.rectangle.draw();
+  }
+
+  drawSquare() {
+    this.square.draw();
+  }
+}
+
+// FacadePatternDemo
+const shapeMaker = new ShapeMaker();
+
+shapeMaker.drawCircle();
+shapeMaker.drawRectangle();
+shapeMaker.drawSquare();
+
+         </code></pre>
          <h2 class="mt-8 text-2xl font-bold text-gray-800" id="strategy-pattern">
             Resources
          </h2>
