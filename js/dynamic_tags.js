@@ -52,16 +52,24 @@ document.addEventListener("DOMContentLoaded", function () {
           >
             <li>
               <a
-                href="/about.html"
-                class="block md:px-4 transition hover:text-purple-700 hover:text-[18px]"
+                href="/#about"
+                class="block md:px-4 transition hover:text-purple-700"
               >
                 <span>About</span>
               </a>
             </li>
             <li>
               <a
-                href="/blogs.html"
-                class="block md:px-4 transition hover:text-purple-700 hover:text-[18px]"
+                href="/#experiences"
+                class="block md:px-4 transition hover:text-purple-700"
+              >
+                <span>Experiences</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/#blogs"
+                class="block md:px-4 transition hover:text-purple-700"
               >
                 <span>Blogs</span>
               </a>
@@ -69,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li>
               <a
                 href="/#projects"
-                class="block md:px-4 transition hover:text-purple-700 hover:text-[18px]"
+                class="block md:px-4 transition hover:text-purple-700"
               >
                 <span>Projects</span>
               </a>
@@ -77,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li>
               <a
                 href="/resume.html"
-                class="block md:px-4 transition hover:text-purple-700 hover:text-[18px]"
+                class="block md:px-4 transition hover:text-purple-700"
               >
                 <span>Resume</span>
               </a>
@@ -85,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li>
               <a
                 href="/#contact"
-                class="block md:px-4 transition hover:text-purple-700 hover:text-[18px]"
+                class="block md:px-4 transition hover:text-purple-700"
               >
                 <span>Contact</span>
               </a>
@@ -114,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div
             class="flex flex-col mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row"
           >
-            <span class="text-white">© 2023, Built by Ritik Chourasiya</span>
+            <span class="text-white">© 2024, Built by Ritik Chourasiya</span>
           </div>
         </div>
 

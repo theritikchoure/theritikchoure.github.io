@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Low Level Design Notes - Ritik Chourasiya</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/icon.png" />
+
+    <!-- stylesheet -->
+    <!-- <link rel="stylesheet" href="styles/style.css" /> -->
+
+    <!-- google console verification code -->
+    <meta
+      name="google-site-verification"
+      content="6ofX_RKaR2tpGrqbRmIsRxaool74YDjaXWOMf7Ar80A"
+    />
+
+    <!-- Meta Tags -->
+    <meta name="title" content="Ritik Chourasiya - Backend Developer" />
+    <meta
+      name="description"
+      content="I'm a 22-year-old, still, undergraduate backend developer based in India, with 2 years of experience in the software industry."
+    />
+    <meta name="keywords" content="backend developer" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content="theritikchoure" />
+    <link rel="canonical" href="https://theritikchoure.github.io/" />
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://theritikchoure.github.io/" />
+    <meta property="og:title" content="Ritik Chourasiya - Backend Developer" />
+    <meta
+      property="og:description"
+      content="I'm a 22-year-old, still, undergraduate backend developer based in India, with 2 years of experience in the software industry."
+    />
+    <meta
+      property="og:image"
+      content="https://theritikchoure.github.io/favicon.png"
+    />
+
+    <!-- twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://theritikchoure.github.io/" />
+    <meta
+      property="twitter:title"
+      content="Ritik Chourasiya - Backend Developer"
+    />
+    <meta
+      property="twitter:description"
+      content="I'm a 22-year-old, still, undergraduate backend developer based in India, with 2 years of experience in the software industry."
+    />
+    <meta
+      property="twitter:image"
+      content="https://theritikchoure.github.io/favicon.png"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Person",
+        "name": "Ritik Chourasiya",
+        "url": "https://theritikchoure.github.io/",
+        "image": "https://theritikchoure.github.io/favicon.png",
+        "sameAs": [
+          "https://www.facebook.com/ritikkailash",
+          "https://twitter.com/theritikchoure",
+          "https://www.instagram.com/theritikchoure/",
+          "https://www.linkedin.com/in/theritikchoure/",
+          "https://github.com/theritikchoure",
+          "https://theritikchoure.github.io/"
+        ],
+        "jobTitle": "Associate Software Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "DOCFLIQ PVT LTD"
+        }
+      }
+    </script>
+    <style>
+      /* Import Muli font */
+      @import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap");
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Apply font-muli class */
+      .font-muli {
+        font-family: "Muli", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="font-muli">
+    <!-- Hero Section -->
+    <div class="relative w-full font-muli">
+      <div id="navbar"></div>
+    </div>
+
+    <div class="px-4 md:px-56 py-8 pt-24">
+      <h1 class="text-5xl text-center font-normal text-gray-800">LLD TOPICS</h1>
+    </div>
+
+    <div class="px-4 lg:px-64 text-lg mb-16">
+      <h1 id="acid-in-databases">ACID in Databases</h1>
+      <p>
+        The ACID properties are fundamental principles that ensure reliable
+        processing of database transactions. They stand for Atomicity,
+        Consistency, Isolation, and Durability.
+      </p>
+      <h2 id="1-atomicity">1. Atomicity</h2>
+      <ul>
+        <li>
+          <strong>Definition</strong>: Atomicity ensures that all operations
+          within a transaction are completed successfully; otherwise, the
+          transaction is aborted.
+        </li>
+        <li>
+          <strong>Key Points</strong>:
+          <ul>
+            <li>
+              All queries in a transaction must succeed for the transaction to
+              be committed.
+            </li>
+            <li>
+              If any query fails, all previous successful queries within the
+              transaction are rolled back.
+            </li>
+            <li>
+              If the database goes down before a transaction commits, all
+              changes made by the transaction are rolled back upon recovery.
+            </li>
+            <li>
+              This ensures that a transaction is an indivisible unit of work.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2 id="2-consistency">2. Consistency</h2>
+      <ul>
+        <li>
+          <strong>Definition</strong>: Consistency ensures that a transaction
+          brings the database from one valid state to another, maintaining
+          database invariants.
+        </li>
+        <li>
+          <strong>Key Points</strong>:
+          <ul>
+            <li>
+              Ensures data integrity by enforcing rules like referential
+              integrity (e.g., foreign keys).
+            </li>
+            <li>
+              Consistency is defined by the user and includes
+              application-specific constraints.
+            </li>
+            <li>
+              A transaction must leave the database in a consistent state,
+              adhering to all defined rules and constraints.
+            </li>
+            <li>Relies on atomicity and isolation to maintain consistency.</li>
+          </ul>
+        </li>
+      </ul>
+      <h2 id="3-isolation">3. Isolation</h2>
+      <ul>
+        <li>
+          <strong>Definition</strong>: Isolation ensures that the intermediate
+          state of a transaction is invisible to other transactions until the
+          transaction is complete.
+        </li>
+        <li>
+          <strong>Key Points</strong>:
+          <ul>
+            <li>
+              Determines whether an inflight transaction can see changes made by
+              other concurrent transactions.
+            </li>
+            <li>
+              <strong>Read Phenomena</strong>:
+              <ul>
+                <li>
+                  <strong>Dirty Reads</strong>: Reading uncommitted changes from
+                  another transaction.
+                </li>
+                <li>
+                  <strong>Non-repeatable Reads</strong>: A transaction reads the
+                  same row twice and gets different values because another
+                  transaction has modified the row and committed in between.
+                </li>
+                <li>
+                  <strong>Phantom Reads</strong>: A transaction re-executes a
+                  query and finds additional rows that were inserted by another
+                  transaction after the initial read.
+                </li>
+                <li>
+                  <strong>Lost Updates</strong>: Occur when two transactions
+                  read the same data and update it simultaneously, resulting in
+                  one update being overwritten by the other.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Isolation Levels</strong>:
+              <ul>
+                <li>
+                  <strong>Read Uncommitted</strong>: Lowest isolation level,
+                  allows dirty reads.
+                </li>
+                <li>
+                  <strong>Read Committed</strong>: Prevents dirty reads, but
+                  non-repeatable reads and phantom reads can occur.
+                </li>
+                <li>
+                  <strong>Repeatable Read</strong>: Prevents dirty reads and
+                  non-repeatable reads, but phantom reads can occur.
+                </li>
+                <li>
+                  <strong>Serializable</strong>: Highest isolation level,
+                  prevents all three phenomena.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2 id="4-durability">4. Durability</h2>
+      <ul>
+        <li>
+          <strong>Definition</strong>: Durability ensures that once a
+          transaction is committed, it will remain so, even in the event of a
+          system failure.
+        </li>
+        <li>
+          <strong>Key Points</strong>:
+          <ul>
+            <li>
+              Ensures that committed changes are permanently recorded in the
+              database.
+            </li>
+            <li>
+              <strong>Durability Techniques</strong>:
+              <ul>
+                <li>
+                  <strong>Write-Ahead Logging (WAL)</strong>: Changes are first
+                  written to a log before being applied to the database.
+                </li>
+                <li>
+                  <strong>Asynchronous/Synchronous Snapshots</strong>: Periodic
+                  snapshots of the database state (e.g., Redis uses asynchronous
+                  snapshots).
+                </li>
+                <li>
+                  <strong>Append-Only File (AOF)</strong>: Logs every operation
+                  that modifies the database, ensuring data can be
+                  reconstructed.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        Together, these properties ensure that transactions are processed
+        reliably and predictably, maintaining the integrity, reliability, and
+        consistency of the database even in the face of concurrent access and
+        system failures.
+      </p>
+    </div>
+
+    <!-- Footer Section -->
+    <div id="footer"></div>
+    <div id="backToTopBtn"></div>
+
+    <script src="../../js/dynamic_tags.js"></script>
+  </body>
+</html>
