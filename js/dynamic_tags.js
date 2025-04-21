@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div
             class="flex flex-col mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row"
           >
-            <span class="text-white">© 2024, Built by Ritik Chourasiya</span>
+            <span class="text-white">© 2025, Built by Ritik Chourasiya</span>
           </div>
         </div>
 
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
               >Projects</a
             >
             <a
-              href="/resume.html"
+              href="/resume.pdf"
               class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-purple-700 hover:underline hover:text-purple-700"
               >Resume</a
             >
