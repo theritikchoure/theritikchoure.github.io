@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function () {
   <div class="flex justify-center">
     <a
       class="bg-purple-500 text-white px-7 py-4 cursor-pointer hover:bg-purple-700 hover:scale-105"
-      href="mailto:contact@ritikchourasiya.com"
+      href="mailto:sweritikchourasiya@gmail.com"
     >
       Contact me
     </a>
